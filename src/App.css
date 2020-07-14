@@ -1,38 +1,65 @@
-.App {
+body {
   text-align: center;
+  background-color: #efefef;
+
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.ProductContainer > div{
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 5px 5px #eeeeee;
+  margin: 10% 35%;
+  
+} 
+.ProductContainer > div > h3 {
+  margin-left: 30%;
+} 
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(104, 228, 217);
+  border: none;
+  border-radius: 16px 16px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 40%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover {
+  background-color: rgb(58, 118, 185);
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover span {
+  padding-right: 25px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
